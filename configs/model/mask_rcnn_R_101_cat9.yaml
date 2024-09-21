@@ -1,0 +1,3 @@
+score_thresh_test: 0.5
+weights_file: "pretrained-models/mask_rcnn_R_101_cat9/mask_rcnn_R_101_cat9.pth"
+config: "pretrained-models/mask_rcnn_R_101_cat9/config.yaml"

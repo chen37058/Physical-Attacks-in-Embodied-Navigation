@@ -1,0 +1,7 @@
+name: 00813-svBbv1Pavdk
+path: "scenes/00813-svBbv1Pavdk/00813-svBbv1Pavdk.xml"
+textures: ["scenes/00813-svBbv1Pavdk/textures/${texture}.png"]
+# target_param_keys: ["adversarial_patch.bsdf.nested_bsdf.reflectance.data"]
+target_param_keys: ["adversarial_patch.bsdf.opacity.data"]
+# target_param_keys: ["elm__50.bsdf.reflectance.data"]
+sensor_key: "PerspectiveCamera"

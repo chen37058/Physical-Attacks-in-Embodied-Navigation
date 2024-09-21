@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  peanut:
+    image: peanut
+    build:
+      context: .
+      dockerfile: ./Dockerfile

@@ -1,0 +1,41 @@
+defaults:
+  - scene: 00813-svBbv1Pavdk
+  - model: mask_rcnn_R_101_cat9
+  - scenario: scenario
+  - scenario/sensor_positions : generate_cube_scene_orbit_cam_positions
+  - _self_
+# for every target['chair', 'sofa', 'plant', 'bed', 'toilet', 'tv_monitor', 'fireplace', 'bathtub', 'mirror']
+attack_class: tv_monitor
+untargeted_class: tv_monitor
+attack: 
+  eps_step: 1
+  # (epsilon/(iters/50))
+  # (255/(500/50))
+  targeted: false
+  target: 8
+  target_idx: 8
+  untarget: null
+  untarget_idx: 5
+  passes: 20
+  passes_names: null
+  batch_size: 1
+  # eps: 5.0 # rgb
+  eps: 255.0 # opacity
+  iters: 1000
+  samples_per_pixel: 4096
+  multi_pass_rendering: true
+  multi_pass_spp_divisor: 128
+texture: adversarial_patch_random
+# texture: 38739dbe0b3246b9a5068bbb5c21596f_018
+multicam: 1
+hydra:
+  run:
+    dir: ./results/${untargeted_class}/${now:%Y-%m-%d}/${now:%H-%M-%S}    
+dataset:
+  name: coco_2017_train
+  library: detectron2
+
+sysconfig:
+  output_path: results/${untargeted_class}
+  pass_idx: null
+  log_dir: ./results/${untargeted_class}/${now:%Y-%m-%d}/${now:%H-%M-%S}
