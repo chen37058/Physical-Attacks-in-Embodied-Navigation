@@ -44,7 +44,7 @@ Attack performance on the HM3D scene dataset for navigation
   <tr>
     <td rowspan="3">chair</td>
     <td>clean</td>
-    <td align="center">100</td>
+    <td align="center">100.00</td>
     <td align="center">65.18</td>
     <td align="center">0.22</td>
   </tr>
