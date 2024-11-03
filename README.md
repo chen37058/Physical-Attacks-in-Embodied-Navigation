@@ -16,7 +16,6 @@ Attack performance on the HM3D scene dataset for navigation
   <tr>
     <th rowspan="2"></th>
     <th rowspan="2">Model</th>
-    
   </tr>
   <tr>
     <th>Success&darr;(%)</th>
@@ -26,8 +25,8 @@ Attack performance on the HM3D scene dataset for navigation
   <tr>
     <td rowspan="3">bed</td>
     <td>clean</td>
-    <td align="center">94.11%</td>
-    <td align="center">55.83%</td>
+    <td align="center">94.11</td>
+    <td align="center">55.83</td>
     <td align="center">0.16</td>
   </tr>
   <tr>
@@ -38,15 +37,15 @@ Attack performance on the HM3D scene dataset for navigation
   </tr>
   <tr>
     <td>ours</td>
-    <td align="center"></td>
-    <td align="center"></td>
-    <td align="center"></td>
+    <td align="center">94.11</td>
+    <td align="center">46.44</td>
+    <td align="center">0.16</td>
   </tr>
   <tr>
     <td rowspan="3">chair</td>
     <td>clean</td>
-    <td align="center">100%</td>
-    <td align="center">65.18%</td>
+    <td align="center">100</td>
+    <td align="center">65.18</td>
     <td align="center">0.22</td>
   </tr>
   <tr>
@@ -64,8 +63,8 @@ Attack performance on the HM3D scene dataset for navigation
   <tr>
     <td rowspan="3">sofa</td>
     <td>clean</td>
-    <td align="center">100%</td>
-    <td align="center">57.28%</td>
+    <td align="center">100.00</td>
+    <td align="center">57.28</td>
     <td align="center">0.36</td>
   </tr>
   <tr>
@@ -83,8 +82,8 @@ Attack performance on the HM3D scene dataset for navigation
   <tr>
     <td rowspan="3">plant</td>
     <td>clean</td>
-    <td align="center">93.75%</td>
-    <td align="center">26.60%</td>
+    <td align="center">93.75</td>
+    <td align="center">26.60</td>
     <td align="center">0.24</td>
   </tr>
   <tr>
@@ -102,8 +101,8 @@ Attack performance on the HM3D scene dataset for navigation
   <tr>
     <td rowspan="3">toilet</td>
     <td>clean</td>
-    <td align="center">81.25%</td>
-    <td align="center">43.32%</td>
+    <td align="center">81.25</td>
+    <td align="center">43.32</td>
     <td align="center">1.32</td>
   </tr>
   <tr>
