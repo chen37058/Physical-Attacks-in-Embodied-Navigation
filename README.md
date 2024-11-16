@@ -12,15 +12,16 @@ The deployment of embodied navigation agents in safety-critical environments rai
 
 ## Experiment
 Attack performance on the HM3D scene dataset for navigation
+
 <table>
   <tr>
     <th rowspan="2"></th>
     <th rowspan="2">Model</th>
   </tr>
   <tr>
-    <th>Success&darr;(%)</th>
-    <th>SPL&darr;(%)</th>
-    <th>DTS&uarr;(m)</th>
+    <th>Success ↓(%)</th>
+    <th>SPL ↓(%)</th>
+    <th>DTS ↑(m)</th>
   </tr>
   <tr>
     <td rowspan="3">tv_monitor</td>
@@ -31,15 +32,15 @@ Attack performance on the HM3D scene dataset for navigation
   </tr>
   <tr>
     <td>camouflage</td>
-    <td align="center">100.00</td>
-    <td align="center">56.37</td>
-    <td align="center">0.04</td>
+    <td align="center">100.00 (0.00↓)</td>
+    <td align="center">56.37 (6.66↓)</td>
+    <td align="center">0.04 (0.00↑)</td>
   </tr>
   <tr>
-    <td>ours</td>
-    <td align="center">60.00</td>
-    <td align="center">14.81 </td>
-    <td align="center">1.68</td>
+    <td><strong>ours patch</strong></td>
+    <td align="center">60.00 (40.00↓)</td>
+    <td align="center">14.81 (48.22↓)</td>
+    <td align="center">1.68 (1.64↑)</td>
   </tr>
   <tr>
     <td rowspan="3">bed</td>
@@ -55,10 +56,10 @@ Attack performance on the HM3D scene dataset for navigation
     <td align="center"></td>
   </tr>
   <tr>
-    <td>ours</td>
-    <td align="center">94.11</td>
-    <td align="center">46.44</td>
-    <td align="center">0.16</td>
+    <td><strong>ours patch</strong></td>
+    <td align="center">94.11 (0.00↓)</td>
+    <td align="center">46.44 (9.39↓)</td>
+    <td align="center">0.16 (0.00↑)</td>
   </tr>
   <tr>
     <td rowspan="3">chair</td>
@@ -74,7 +75,7 @@ Attack performance on the HM3D scene dataset for navigation
     <td align="center"></td>
   </tr>
   <tr>
-    <td>ours</td>
+    <td><strong>ours patch</strong></td>
     <td align="center"></td>
     <td align="center"></td>
     <td align="center"></td>
@@ -93,7 +94,7 @@ Attack performance on the HM3D scene dataset for navigation
     <td align="center"></td>
   </tr>
   <tr>
-    <td>ours</td>
+    <td><strong>ours patch</strong></td>
     <td align="center"></td>
     <td align="center"></td>
     <td align="center"></td>
@@ -112,10 +113,10 @@ Attack performance on the HM3D scene dataset for navigation
     <td align="center"></td>
   </tr>
   <tr>
-    <td>ours</td>
-    <td align="center">62.50</td>
-    <td align="center">7.98</td>
-    <td align="center">0.73</td>
+    <td><strong>ours patch</strong></td>
+    <td align="center">62.50 (31.25↓)</td>
+    <td align="center">7.98 (18.62↓)</td>
+    <td align="center">0.73 (0.49↑)</td>
   </tr>
   <tr>
     <td rowspan="3">toilet</td>
@@ -131,12 +132,13 @@ Attack performance on the HM3D scene dataset for navigation
     <td align="center"></td>
   </tr>
   <tr>
-    <td>ours</td>
+    <td><strong>ours patch</strong></td>
     <td align="center"></td>
     <td align="center"></td>
     <td align="center"></td>
   </tr>
 </table>
+
 
 
 ## Data Preparation 
