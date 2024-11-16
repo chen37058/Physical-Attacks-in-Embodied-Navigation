@@ -23,6 +23,25 @@ Attack performance on the HM3D scene dataset for navigation
     <th>DTS&uarr;(m)</th>
   </tr>
   <tr>
+    <td rowspan="3">tv_monitor</td>
+    <td>clean</td>
+    <td align="center">100.00</td>
+    <td align="center">63.03</td>
+    <td align="center">0.04</td>
+  </tr>
+  <tr>
+    <td>camouflage</td>
+    <td align="center">100.00</td>
+    <td align="center">56.37</td>
+    <td align="center">0.04</td>
+  </tr>
+  <tr>
+    <td>ours</td>
+    <td align="center">60.00</td>
+    <td align="center">14.81 </td>
+    <td align="center">1.68</td>
+  </tr>
+  <tr>
     <td rowspan="3">bed</td>
     <td>clean</td>
     <td align="center">94.11</td>
@@ -88,15 +107,15 @@ Attack performance on the HM3D scene dataset for navigation
   </tr>
   <tr>
     <td>camouflage</td>
-    <td align="center">62.50</td>
-    <td align="center">7.98</td>
-    <td align="center">0.73</td>
+    <td align="center"></td>
+    <td align="center"></td>
+    <td align="center"></td>
   </tr>
   <tr>
     <td>ours</td>
-    <td align="center"></td>
-    <td align="center"></td>
-    <td align="center"></td>
+    <td align="center">62.50</td>
+    <td align="center">7.98</td>
+    <td align="center">0.73</td>
   </tr>
   <tr>
     <td rowspan="3">toilet</td>
