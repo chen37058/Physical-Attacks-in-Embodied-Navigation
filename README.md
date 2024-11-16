@@ -88,9 +88,9 @@ Attack performance on the HM3D scene dataset for navigation
   </tr>
   <tr>
     <td>camouflage</td>
-    <td align="center"></td>
-    <td align="center"></td>
-    <td align="center"></td>
+    <td align="center">62.50</td>
+    <td align="center">7.98</td>
+    <td align="center">0.73</td>
   </tr>
   <tr>
     <td>ours</td>
