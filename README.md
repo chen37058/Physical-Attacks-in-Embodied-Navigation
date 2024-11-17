@@ -205,9 +205,10 @@ Set up the attack scenario
 - Set the id for untargeted attack in the global configuration ```configs/config.yaml```, for example, TV, untarget_idx: 5
 
 - Set the parameters to be optimized in the scene configuration, taking the scene config configs/scene/00813-svBbv1Pavdk.yaml as an example,
-  - If you want to optimize camouflage, target_param_keys: ["adversarial_patch.bsdf.nested_bsdf.reflectance.data"]
+  - If you want to optimize camouflage, target_param_keys: ["elm__50.bsdf.reflectance.data"]
+  - If you want to optimize the texture of the adversarial patch, target_param_keys: ["adversarial_patch.bsdf.nested_bsdf.reflectance.data"]
   - If you want to optimize the opacity of the adversarial patch, target_param_keys: ["adversarial_patch.bsdf.opacity.data"]
-  - If you want to optimize the texture of the adversarial patch, target_param_keys: ["elm__50.bsdf.reflectance.data"]
+  
 
 - Run the optimization script. If the memory is not enough, in configs/config.yaml, reduce samples_per_pixel, increase multi_pass_spp_divisor
 ```
