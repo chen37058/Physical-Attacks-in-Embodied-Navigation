@@ -11,27 +11,27 @@ The deployment of embodied navigation agents in safety-critical environments rai
 ![example-video-2](docs/example-video-2.gif)
 
 ## Experiment
-Attack performance on the HM3D scene dataset for navigation
+### Attack performance on the HM3D scene dataset for navigation
 
 <table>
   <tr>
     <th rowspan="2"></th>
     <th rowspan="2">Attack Method</th>
-  </tr>
-  <tr>
-    <th>Success ↓(%)</th>
+    <th>SR ↓(%)</th>
     <th>SPL ↓(%)</th>
     <th>DTS ↑(m)</th>
   </tr>
+  <tr></tr>
+  
   <tr>
-    <td rowspan="3">tv_monitor</td>
+    <td rowspan="3">TV Monitor</td>
     <td>Clean</td>
     <td align="center">100.00</td>
     <td align="center">63.03</td>
     <td align="center">0.04</td>
   </tr>
   <tr>
-    <td>camouflage</td>
+    <td>Camouflage</td>
     <td align="center">100.00 (0.00↓)</td>
     <td align="center">56.37 (6.66↓)</td>
     <td align="center">0.04 (0.00↑)</td>
@@ -42,8 +42,9 @@ Attack performance on the HM3D scene dataset for navigation
     <td align="center">14.81 (48.22↓)</td>
     <td align="center">1.68 (1.64↑)</td>
   </tr>
+  
   <tr>
-    <td rowspan="3">plant</td>
+    <td rowspan="3">Plant</td>
     <td>Clean</td>
     <td align="center">93.75</td>
     <td align="center">26.60</td>
@@ -61,8 +62,9 @@ Attack performance on the HM3D scene dataset for navigation
     <td align="center">7.98 (18.62↓)</td>
     <td align="center">0.73 (0.49↑)</td>
   </tr>
+
   <tr>
-    <td rowspan="3">bed</td>
+    <td rowspan="3">Bed</td>
     <td>Clean</td>
     <td align="center">94.11</td>
     <td align="center">55.83</td>
@@ -70,9 +72,9 @@ Attack performance on the HM3D scene dataset for navigation
   </tr>
   <tr>
     <td>Camouflage</td>
-    <td align="center"></td>
-    <td align="center"></td>
-    <td align="center"></td>
+    <td align="center">94.11 (0.00↓)</td>
+    <td align="center">55.95 (0.12↓)</td>
+    <td align="center">0.16 (0.00↑)</td>
   </tr>
   <tr>
     <td><strong>Ours Patch</strong></td>
@@ -80,8 +82,9 @@ Attack performance on the HM3D scene dataset for navigation
     <td align="center">46.44 (9.39↓)</td>
     <td align="center">0.16 (0.00↑)</td>
   </tr>
+
   <tr>
-    <td rowspan="3">chair</td>
+    <td rowspan="3">Chair</td>
     <td>Clean</td>
     <td align="center">100.00</td>
     <td align="center">65.18</td>
@@ -89,18 +92,19 @@ Attack performance on the HM3D scene dataset for navigation
   </tr>
   <tr>
     <td>Camouflage</td>
-    <td align="center"></td>
-    <td align="center"></td>
-    <td align="center"></td>
+    <td align="center">100.00 (0.00↓)</td>
+    <td align="center">58.97 (6.21↓)</td>
+    <td align="center">0.22 (0.00↑)</td>
   </tr>
   <tr>
     <td><strong>Ours Patch</strong></td>
-    <td align="center"></td>
-    <td align="center"></td>
-    <td align="center"></td>
+    <td align="center">83.33 (16.67↓)</td>
+    <td align="center">47.12 (18.06↓)</td>
+    <td align="center">0.34 (0.12↑)</td>
   </tr>
+
   <tr>
-    <td rowspan="3">sofa</td>
+    <td rowspan="3">Sofa</td>
     <td>Clean</td>
     <td align="center">100.00</td>
     <td align="center">57.28</td>
@@ -108,18 +112,19 @@ Attack performance on the HM3D scene dataset for navigation
   </tr>
   <tr>
     <td>Camouflage</td>
-    <td align="center"></td>
-    <td align="center"></td>
-    <td align="center"></td>
+    <td align="center">100.00 (0.00↓)</td>
+    <td align="center">50.45 (6.83↓)</td>
+    <td align="center">0.36 (0.00↑)</td>
   </tr>
   <tr>
     <td><strong>Ours Patch</strong></td>
-    <td align="center"></td>
-    <td align="center"></td>
-    <td align="center"></td>
+    <td align="center">78.57 (21.43↓)</td>
+    <td align="center">42.19 (15.09↓)</td>
+    <td align="center">0.52 (0.16↑)</td>
   </tr>
+
   <tr>
-    <td rowspan="3">toilet</td>
+    <td rowspan="3">Toilet</td>
     <td>Clean</td>
     <td align="center">81.25</td>
     <td align="center">43.32</td>
@@ -127,18 +132,18 @@ Attack performance on the HM3D scene dataset for navigation
   </tr>
   <tr>
     <td>Camouflage</td>
-    <td align="center"></td>
-    <td align="center"></td>
-    <td align="center"></td>
+    <td align="center">75.00 (6.25↓)</td>
+    <td align="center">36.85 (6.47↓)</td>
+    <td align="center">1.49 (0.17↑)</td>
   </tr>
   <tr>
     <td><strong>Ours Patch</strong></td>
-    <td align="center"></td>
-    <td align="center"></td>
-    <td align="center"></td>
+    <td align="center">56.25 (25.00↓)</td>
+    <td align="center">27.42 (15.90↓)</td>
+    <td align="center">1.93 (0.61↑)</td>
   </tr>
-</table>
 
+</table>
 
 
 ## Data Preparation 
