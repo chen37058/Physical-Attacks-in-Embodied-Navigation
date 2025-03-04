@@ -1,9 +1,9 @@
-# Towards Physically-Realizable Adversarial Attacks in Embodied Vision Navigation
+# Towards Physically Realizable Adversarial Attacks in Embodied Vision Navigation
 
 [arXiv Paper](https://arxiv.org/abs/2409.10071) 
 
 ## Abstract
-The significant advancements in embodied vision navigation have raised concerns about its susceptibility to adversarial attacks exploiting deep neural networks. Investigating the adversarial robustness of embodied vision navigation is crucial, especially in the face of 3D physical attacks that could pose risks to human safety. However, existing attack methods for embodied vision navigation often fail to be physically feasible due to challenges in transferring digital perturbations into the physical world. Moreover, current physical attacks for object detection struggle to achieve both multi-view effectiveness and visual naturalness in navigation scenarios. To address this, we propose a practical attack method for embodied navigation by attaching adversarial patches to objects, where both opacity and textures are learnable. Specifically, to ensure effectiveness across varying viewpoints, we employ a multi-view optimization strategy based on object-aware sampling, which optimizes the patch's texture based on feedback from the vision-based perception model used in navigation. To make the patch inconspicuous to human observers, we introduce a two-stage opacity optimization mechanism, in which opacity is refined after texture optimization. Experimental results demonstrate that our adversarial patches decrease the navigation success rate by an average of 25.06%, outperforming previous methods in practicality, effectiveness, and naturalness.
+The significant advancements in embodied vision navigation have raised concerns about its susceptibility to adversarial attacks exploiting deep neural networks. Investigating the adversarial robustness of embodied vision navigation is crucial, especially given the threat of 3D physical attacks that could pose risks to human safety. However, existing attack methods for embodied vision navigation often lack physical feasibility due to challenges in transferring digital perturbations into the physical world. Moreover, current physical attacks for object detection struggle to achieve both multi-view effectiveness and visual naturalness in navigation scenarios. To address this, we propose a practical attack method for embodied navigation by attaching adversarial patches to objects, where both opacity and textures are learnable. Specifically, to ensure effectiveness across varying viewpoints, we employ a multi-view optimization strategy based on object-aware sampling, which optimizes the patch's texture based on feedback from the vision-based perception model used in navigation. To make the patch inconspicuous to human observers, we introduce a two-stage opacity optimization mechanism, in which opacity is fine-tuned after texture optimization. Experimental results demonstrate that our adversarial patches decrease the navigation success rate by an average of 22.39%, outperforming previous methods in practicality, effectiveness, and naturalness.
 
 ## Example Video
 ![example-video-1](docs/naturalness.png)
@@ -11,139 +11,30 @@ The significant advancements in embodied vision navigation have raised concerns 
 ![example-video-2](docs/example-video-2.gif)
 
 ## Experiment
-### Attack performance on the HM3D scene dataset for navigation
-
-<table>
-  <tr>
-    <th rowspan="2"></th>
-    <th rowspan="2">Attack Method</th>
-    <th>SR ↓(%)</th>
-    <th>SPL ↓(%)</th>
-    <th>DTS ↑(m)</th>
-  </tr>
-  <tr></tr>
-  
-  <tr>
-    <td rowspan="3">TV Monitor</td>
-    <td>Clean</td>
-    <td align="center">100.00</td>
-    <td align="center">63.03</td>
-    <td align="center">0.04</td>
-  </tr>
-  <tr>
-    <td>Camouflage</td>
-    <td align="center">100.00 (0.00↓)</td>
-    <td align="center">56.37 (6.66↓)</td>
-    <td align="center">0.04 (0.00↑)</td>
-  </tr>
-  <tr>
-    <td><strong>Ours Patch</strong></td>
-    <td align="center">60.00 (40.00↓)</td>
-    <td align="center">14.81 (48.22↓)</td>
-    <td align="center">1.68 (1.64↑)</td>
-  </tr>
-  
-  <tr>
-    <td rowspan="3">Plant</td>
-    <td>Clean</td>
-    <td align="center">93.75</td>
-    <td align="center">26.60</td>
-    <td align="center">0.24</td>
-  </tr>
-  <tr>
-    <td>Camouflage</td>
-    <td align="center">37.50 (56.25↓)</td>
-    <td align="center">11.87 (14.73↓)</td>
-    <td align="center">1.06 (0.82↑)</td>
-  </tr>
-  <tr>
-    <td><strong>Ours Patch</strong></td>
-    <td align="center">62.50 (31.25↓)</td>
-    <td align="center">7.98 (18.62↓)</td>
-    <td align="center">0.73 (0.49↑)</td>
-  </tr>
-
-  <tr>
-    <td rowspan="3">Bed</td>
-    <td>Clean</td>
-    <td align="center">94.11</td>
-    <td align="center">55.83</td>
-    <td align="center">0.16</td>
-  </tr>
-  <tr>
-    <td>Camouflage</td>
-    <td align="center">94.11 (0.00↓)</td>
-    <td align="center">55.95 (0.12↓)</td>
-    <td align="center">0.16 (0.00↑)</td>
-  </tr>
-  <tr>
-    <td><strong>Ours Patch</strong></td>
-    <td align="center">94.11 (0.00↓)</td>
-    <td align="center">46.44 (9.39↓)</td>
-    <td align="center">0.16 (0.00↑)</td>
-  </tr>
-
-  <tr>
-    <td rowspan="3">Chair</td>
-    <td>Clean</td>
-    <td align="center">100.00</td>
-    <td align="center">65.18</td>
-    <td align="center">0.22</td>
-  </tr>
-  <tr>
-    <td>Camouflage</td>
-    <td align="center">100.00 (0.00↓)</td>
-    <td align="center">58.97 (6.21↓)</td>
-    <td align="center">0.22 (0.00↑)</td>
-  </tr>
-  <tr>
-    <td><strong>Ours Patch</strong></td>
-    <td align="center">83.33 (16.67↓)</td>
-    <td align="center">47.12 (18.06↓)</td>
-    <td align="center">0.34 (0.12↑)</td>
-  </tr>
-
-  <tr>
-    <td rowspan="3">Sofa</td>
-    <td>Clean</td>
-    <td align="center">100.00</td>
-    <td align="center">57.28</td>
-    <td align="center">0.36</td>
-  </tr>
-  <tr>
-    <td>Camouflage</td>
-    <td align="center">100.00 (0.00↓)</td>
-    <td align="center">50.45 (6.83↓)</td>
-    <td align="center">0.36 (0.00↑)</td>
-  </tr>
-  <tr>
-    <td><strong>Ours Patch</strong></td>
-    <td align="center">78.57 (21.43↓)</td>
-    <td align="center">42.19 (15.09↓)</td>
-    <td align="center">0.52 (0.16↑)</td>
-  </tr>
-
-  <tr>
-    <td rowspan="3">Toilet</td>
-    <td>Clean</td>
-    <td align="center">81.25</td>
-    <td align="center">43.32</td>
-    <td align="center">1.32</td>
-  </tr>
-  <tr>
-    <td>Camouflage</td>
-    <td align="center">75.00 (6.25↓)</td>
-    <td align="center">36.85 (6.47↓)</td>
-    <td align="center">1.49 (0.17↑)</td>
-  </tr>
-  <tr>
-    <td><strong>Ours Patch</strong></td>
-    <td align="center">56.25 (25.00↓)</td>
-    <td align="center">27.42 (15.90↓)</td>
-    <td align="center">1.93 (0.61↑)</td>
-  </tr>
-
-</table>
+### Attack performance against multiple targets in HM3D for navigation
+| Target       | Attack Method  | SR↓(%)  | SPL↓(%)  | DTS↑(m)  |
+|-------------|---------------|---------|---------|---------|
+| **tv monitor** | No Attack     | 100.00  | 63.03   | 0.04    |
+|             | Camouflage     | 100.00 *(0.00↓)* | 56.37 *(6.66↓)* | 0.04 *(0.00↑)* |
+|             | *Ours* Patch   | **60.00** *(40.00↓)* | **14.81** *(48.22↓)* | **1.68** *(1.64↑)* |
+| **plant**   | No Attack     | 93.75   | 26.60   | 0.24    |
+|             | Camouflage     | **37.50** *(56.25↓)* | 11.87 *(14.73↓)* | **1.06** *(0.82↑)* |
+|             | *Ours* Patch   | 62.50 *(31.25↓)* | **7.98** *(18.62↓)* | 0.73 *(0.49↑)* |
+| **bed**     | No Attack     | 94.11   | 55.83   | 0.16    |
+|             | Camouflage     | 94.11 *(0.00↓)* | 55.95 *(0.12↓)* | 0.16 *(0.00↑)* |
+|             | *Ours* Patch   | **94.11** *(0.00↓)* | **46.44** *(9.39↓)* | **0.16** *(0.00↑)* |
+| **chair**   | No Attack     | 100.00  | 65.18   | 0.22    |
+|             | Camouflage     | 100.00 *(0.00↓)* | 58.97 *(6.21↓)* | 0.22 *(0.00↑)* |
+|             | *Ours* Patch   | **83.33** *(16.67↓)* | **47.12** *(18.06↓)* | **0.34** *(0.12↑)* |
+| **sofa**    | No Attack     | 100.00  | 57.28   | 0.36    |
+|             | Camouflage     | 100.00 *(0.00↓)* | 50.45 *(6.83↓)* | 0.36 *(0.00↑)* |
+|             | *Ours* Patch   | **78.57** *(21.43↓)* | **42.19** *(15.09↓)* | **0.52** *(0.16↑)* |
+| **toilet**  | No Attack     | 81.25   | 43.32   | 1.32    |
+|             | Camouflage     | 75.00 *(6.25↓)* | 36.85 *(6.47↓)* | 1.49 *(0.17↑)* |
+|             | *Ours* Patch   | **56.25** *(25.00↓)* | **27.42** *(15.90↓)* | **1.93** *(0.61↑)* |
+| **Average** | No Attack     | 94.85   | 51.87   | 0.39    |
+|             | Camouflage     | 84.44 *(10.41↓)* | 45.08 *(6.79↓)* | 0.56 *(0.17↑)* |
+|             | *Ours* Patch   | **72.46** *(22.39↓)* | **30.99** *(20.88↓)* | **0.89** *(0.50↑)* |
 
 
 ## Data Preparation 
